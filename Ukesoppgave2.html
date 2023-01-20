@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukesoppgave 2</title>
+</head>
+
+<body>
+    <img onclick="addShoePicWithThis(this)" class="pict" />
+
+    <img onclick="addShoePicWithThis(this)" class="pict" />
+
+
+
+    <img id="Mittbilde3" class="pict" onclick="addShoePic('Mittbilde3','150px')"  />
+
+
+
+
+    </div>
+
+    <script>
+
+        function getPicIfElse() {
+
+            let mynumber = Math.ceil(Math.random() * 3);
+            console.log(mynumber)
+
+            if (mynumber == 1) {
+                return 'https://picsum.photos/150/150';
+            }
+
+
+            else if (mynumber == 2) {
+                return 'https://picsum.photos/150/150';
+            }
+
+            else {
+                return 'https://picsum.photos/150/150';
+            }
+        }
+
+        function addShoePicWithThis(elem) {
+            console.log(elem)
+            elem.src = 'https://github.com/AlexanderAW97/Ukesoppgave-2/blob/main/png-transparent-t-shirt-logo-graphic-design-dolphin-marine-mammal-animals-photography.png?raw=true'
+            
+            
+        }
+
+        function addShoePic(pictureid, height) {
+            let picResult = getPicIfElse();
+            document.getElementById(pictureid).src = picResult;
+            document.getElementById(pictureid).style.height = height;
+        }
+
+
+
+
+    </script>
+    <style>
+        .pict {
+            height: 150px;
+            width: 150px;
+            box-shadow: 10px 10px 10px
+
+        }
+    </style>
+</body>
+
+</html>
+</body>
+
+</html>
